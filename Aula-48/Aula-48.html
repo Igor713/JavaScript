@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <title>Manipulando estilos de elementos</title>
+
+    <script>
+        function modifyStyle(backgroundColor) {
+            document.getElementById('square').style.background = backgroundColor;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Manipulando estilo</h1>
+
+    <button class="red-button" type="button" onclick="modifyStyle('#FF0000')">Vermelho</button>
+    <button class="green-button" type="button" onclick="modifyStyle('#00FF00')">verde</button>
+    <button class="blue-button" type="button" onclick="modifyStyle('#0000FF')">Azul</button>
+
+    <hr>
+    <div id="square" class="main-background"></div>
+</body>
+</html>
