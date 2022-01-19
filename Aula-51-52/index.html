@@ -5,8 +5,6 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="global.css">
-
-
 	</head>
 
   <body style="background: #D9D9D9">
@@ -60,12 +58,25 @@
       function calculate(type, fieldValue) {
         if(type === 'action') {
 
+          if(fieldValue === 'c') {
+            // Limpar visor
+            document.getElementById('result').value = '';
+          }
+
+          if(fieldValue === '+' || fieldValue === '-' || fieldValue === '*' || fieldValue === '/' || fieldValue === '.') {
+            document.getElementById('result').value += fieldValue;
+          }
+
+          if(fieldValue === '=') {
+            let accountResult = eval(document.getElementById('result').value);
+
+            document.getElementById('result').value += accountResult;
+          }
+
         } else if (type === 'fieldValue') {
           document.getElementById('result').value += fieldValue;
         }
       }
     </script>
-
   </body>	
-
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
     <link rel="stylesheet" href="global.css">
 </head>
+
 <body>
     <script>
         function changeBackground() {
@@ -16,8 +18,8 @@
 
         function recoverValue() {
             let character = document.getElementById('text-field').value;
-            
-            if(character.length < 3) {
+
+            if (character.length < 3) {
                 document.getElementById('text-field').className = 'style2'
             } else {
                 document.getElementById('text-field').className = 'style3'
@@ -27,6 +29,7 @@
     </script>
 
     <input id="text-field" onfocus="changeBackground()" onblur="recoverValue()" type="text">
-    
+
 </body>
+
 </html>
