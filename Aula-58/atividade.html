@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+
+
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="object-entry">
+        <button id="add">Adicionar</button>
+        <button id="sort-list">Ordenar</button>
+    </div>
+</body>
+
+<script>
+    let objectList = ["Cadeira", "Impressora", "Garfo"];
+
+    let objectEntry = document.getElementById("object-entry");
+    let add = document.getElementById("add");
+    let sortList = document.getElementById("sort-list");
+
+    add.addEventListener("click", () => {
+        if (objectEntry.value == "") {
+            alert("Informe um valor válido");
+
+        } else if (objectList.indexOf(objectEntry.value) != -1) {
+            console.log(objectList);
+            alert("Objeto já adicionado");
+
+        } else {
+            objectList.push(objectEntry.value);
+            console.log(objectList);
+            objectEntry.value = "";
+        }
+    })
+
+    sortList.addEventListener("click", () => {
+        objectList.sort();
+        console.log(objectList);
+    })
+
+
+</script>
+</html>
